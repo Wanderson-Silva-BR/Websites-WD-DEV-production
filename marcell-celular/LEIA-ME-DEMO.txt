@@ -1,0 +1,18 @@
+MARCELL CELULAR — DEMO V6
+
+Este pacote é exclusivamente para carregamento manual no Cloudflare Pages.
+O index.html está na raiz.
+
+PAINEL DE TESTE:
+Usuário: MarcellPDF
+Senha: Testepanel@1
+
+Nesta demonstração, catálogo, preços, estoque, cadastro de cliente e imagens editadas pelo painel são armazenados apenas no navegador (localStorage). Isso permite demonstrar o fluxo sem backend.
+
+A versão definitiva Full Stack usa Cloudflare Functions + D1 + R2 e mantém autenticação/senhas no servidor.
+
+
+VERSÃO 6.1: corrigida a inicialização do catálogo e carregamento das imagens após cadastro de produtos.
+
+
+V7: Motion.js, consentimento de cookies e páginas LGPD/privacidade adicionados.

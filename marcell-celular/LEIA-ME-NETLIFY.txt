@@ -1,0 +1,25 @@
+MARCELL CELULAR — V7 PARA NETLIFY
+
+Este pacote foi preparado para upload direto no Netlify Drop.
+
+COMO PUBLICAR
+1. Abra https://app.netlify.com/drop
+2. Arraste este ZIP descompactado ou a pasta com estes arquivos.
+3. O arquivo index.html já está na raiz.
+4. O Netlify criará um endereço *.netlify.app automaticamente.
+
+INCLUÍDO
+- catálogo e navegação por marcas;
+- painel administrativo de demonstração;
+- área do cliente de demonstração;
+- modo claro/escuro;
+- Motion.js;
+- banner de cookies;
+- páginas de Privacidade, Cookies, LGPD e Termos;
+- headers de segurança para Netlify;
+- rotas amigáveis (/admin, /conta, /lgpd etc.).
+
+IMPORTANTE
+Esta versão é a DEMONSTRAÇÃO estática. Cadastro/admin usam armazenamento no navegador.
+Para produção real com dados compartilhados entre dispositivos, upload de imagens real,
+estoque persistente e autenticação segura, o backend precisa ser conectado a um banco/API.
