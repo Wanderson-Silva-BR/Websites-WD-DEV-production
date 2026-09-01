@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="WD DEV Experience — escolha um projeto e explore nosso portfólio digital.">
+  <title>WD DEV — Onde a experiência começa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="wd-logo" href="#inicio" aria-label="WD DEV — início">
+      <span class="logo-symbol"><i>W</i><i>D</i></span>
+      <span class="logo-copy"><strong>WD</strong><small>DEV</small></span>
+    </a>
+    <a class="contact-link" href="https://wa.me/5584987256489?text=Ol%C3%A1%20WD%20DEV!%20Conheci%20o%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Fale com a WD DEV <span>↗</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="experience-shell" aria-labelledby="pageTitle">
+      <div class="intro">
+        <span class="eyebrow">WD DEV EXPERIENCE</span>
+        <h1 id="pageTitle">Quem você quer<br><em>conhecer primeiro?</em></h1>
+        <p>É aqui onde a experiência começa. Escolha uma marca e descubra como transformamos ideias em presenças digitais únicas.</p>
+      </div>
+
+      <div class="profiles" role="list" aria-label="Projetos do portfólio">
+        <button class="profile belshi" type="button" role="listitem" data-project="belshi-studio" data-name="Belshi Studio" data-color="#c52026">
+          <span class="profile-art"><span class="profile-monogram">B</span><span class="profile-glow"></span></span>
+          <span class="profile-name">Belshi Studio</span>
+          <span class="profile-type">Fotografia & Design</span>
+        </button>
+
+        <button class="profile ph" type="button" role="listitem" data-project="ph-store" data-name="PH STORE" data-color="#df7a2d">
+          <span class="profile-art"><span class="profile-monogram">PH</span><span class="profile-glow"></span></span>
+          <span class="profile-name">PH STORE</span>
+          <span class="profile-type">Moda & Lifestyle</span>
+        </button>
+
+        <button class="profile marcell" type="button" role="listitem" data-project="marcell-celular" data-name="Marcell Celular" data-color="#eaa10b">
+          <span class="profile-art"><span class="profile-monogram">MC</span><span class="profile-glow"></span></span>
+          <span class="profile-name">Marcell Celular</span>
+          <span class="profile-type">Smartphones & Assistência</span>
+        </button>
+
+        <button class="profile marlon" type="button" role="listitem" data-project="marlon-tech" data-name="Marlon Tech" data-color="#15a8ff">
+          <span class="profile-art"><span class="profile-monogram">MT</span><span class="profile-glow"></span></span>
+          <span class="profile-name">Marlon Tech</span>
+          <span class="profile-type">Eletrônicos Premium</span>
+        </button>
+      </div>
+
+      <div class="hint"><span></span> Selecione um perfil para entrar</div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 WD DEV</span>
+    <span>Ideias no papel. Experiências ON.</span>
+  </footer>
+
+  <div class="transition" id="transition" aria-hidden="true">
+    <div class="transition-brand">
+      <span class="transition-kicker">ENTRANDO EM</span>
+      <strong id="transitionName">Projeto</strong>
+      <span class="loading-line"><i></i></span>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
