@@ -11,7 +11,7 @@ run_worker_first = ["/api/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "wd-marlon-tech-db"
-database_id = "REPLACE_AFTER_D1_CREATE"
+database_id = "4702d590-1034-4d88-995b-b9fa896898a7"
 migrations_dir = "migrations"
 
 [[r2_buckets]]
