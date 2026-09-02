@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const worker=fs.readFileSync(new URL('../src/worker.ts',import.meta.url),'utf8');const security=fs.readFileSync(new URL('../src/security.ts',import.meta.url),'utf8');const migration=fs.readFileSync(new URL('../migrations/0001_security.sql',import.meta.url),'utf8');
+test('no demo credentials in client files',()=>{for(const f of ['../public/app.js','../public/admin.js','../public/index.html','../public/admin.html'])assert.doesNotMatch(fs.readFileSync(new URL(f,import.meta.url),'utf8'),/Demo2026|Testepanel|admin@/i)});
+test('server controls sessions and csrf',()=>{assert.match(worker,/HttpOnly|requireCsrf|requireRole/);assert.match(worker,/rateLimit/)});
+test('database enforces roles and foreign keys',()=>{assert.match(migration,/CHECK \(role IN/);assert.match(migration,/FOREIGN KEY|REFERENCES users/)});
+test('strict browser security headers are present',()=>{for(const value of ['Content-Security-Policy','Strict-Transport-Security','X-Content-Type-Options','Permissions-Policy','frame-ancestors'])assert.match(security,new RegExp(value))});
+test('temporary admin password must be changed',()=>{assert.match(migration,/must_change_password/);assert.match(worker,/PASSWORD_CHANGE_REQUIRED/);assert.match(worker,/auth\/change-password/)});
+test('state changes require server-side csrf and roles',()=>{assert.match(worker,/requireCsrf\(req,auth\)/);assert.match(worker,/requireRole\(auth,\["admin"/)});
+test('client avoids dangerous html execution',()=>{for(const f of ['../public/site.js','../public/admin.js']){const source=fs.readFileSync(new URL(f,import.meta.url),'utf8');assert.doesNotMatch(source,/innerHTML|outerHTML|insertAdjacentHTML|eval\(|new Function/)}});
+test('secrets are configuration-only',()=>{for(const f of ['../wrangler.toml','../public/app.js','../public/site.js','../public/admin.js']){const source=fs.readFileSync(new URL(f,import.meta.url),'utf8');assert.doesNotMatch(source,/PASSWORD_PEPPER\s*=\s*["'][^"']+|IP_HASH_KEY\s*=\s*["'][^"']+/)}});

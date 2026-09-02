@@ -1,0 +1,29 @@
+name = "wd-ph-store-secure"
+main = "src/worker.ts"
+compatibility_date = "2026-08-28"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wd-ph-store-db"
+database_id = "REPLACE_AFTER_D1_CREATE"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "wd-ph-store-media"
+
+[vars]
+APP_NAME = "PH STORE"
+APP_KIND = "store"
+ALLOW_REGISTRATION = "true"
+SESSION_TTL_SECONDS = "43200"
+
+# Configure with `wrangler secret put` — never write values here:
+# PASSWORD_PEPPER
+# IP_HASH_KEY
