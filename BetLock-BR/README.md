@@ -2,6 +2,16 @@
 
 O **BetLock BR** é um projeto independente de prevenção e redução de danos relacionados a apostas online. A ideia nasceu de uma experiência pessoal real com apostas e da vontade de transformar essa experiência em uma ferramenta útil para outras pessoas.
 
+## Sobre a iniciativa
+
+**Idealizador:** Wanderson — **2º Período — BICT**
+
+Este projeto é uma iniciativa pessoal de caráter acadêmico e experimental, sem vinculação institucional com a WD DEV.
+
+Posiciono-me de forma crítica e contrária à normalização das apostas online e aos impactos financeiros e sociais que elas podem causar. O objetivo do BetLock BR não é incentivar curiosidade sobre plataformas de apostas, mas criar uma barreira prática para ajudar pessoas a se manterem afastadas delas.
+
+> **Recomendação:** não aposte, não crie conta e não deposite qualquer valor para testar o aplicativo. Casas de apostas são estruturadas para operar com vantagem matemática sobre o jogador; participar financeiramente não é necessário para contribuir com este projeto.
+
 ## Teste universitário
 
 A versão recomendada para testes é a **v2.1 Campus Beta**. O objetivo deste piloto é descobrir:
@@ -12,7 +22,7 @@ A versão recomendada para testes é a **v2.1 Campus Beta**. O objetivo deste pi
 - problemas de desempenho e compatibilidade;
 - melhorias de interface e progressão.
 
-**Importante:** ninguém precisa apostar dinheiro para testar. O teste consiste apenas em verificar se páginas públicas conhecidas de apostas são bloqueadas. Não faça depósitos, cadastros ou apostas para participar do piloto.
+**Importante:** ninguém precisa apostar dinheiro para testar. O teste consiste apenas em verificar se páginas públicas conhecidas de apostas são bloqueadas. **Não faça depósitos, cadastros ou apostas para participar do piloto.**
 
 ## Downloads
 
@@ -49,4 +59,6 @@ A linha futura prevê atualização comunitária de domínios, backend Cloudflar
 
 ---
 
-Desenvolvimento inicial: **WD DEV / Wanderson-Silva-BR**.
+**Wanderson — 2º Período — BICT**
+
+Projeto acadêmico e experimental de iniciativa pessoal.
