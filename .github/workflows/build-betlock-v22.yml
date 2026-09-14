@@ -6,6 +6,7 @@ on:
     branches: [ betlock-br ]
     paths:
       - '.github/workflows/build-betlock-v22.yml'
+      - 'BetLock-BR/v2.2-source/**'
 
 permissions:
   contents: read
@@ -33,3 +34,15 @@ jobs:
         with:
           name: BetLockBR-v2.2.0-build
           path: BetLock-BR/v2.2-source/app/build/outputs/apk/release/app-release-unsigned.apk
+      - name: Export Android apksigner
+        shell: bash
+        run: |
+          VERSION="$(ls -1 "$ANDROID_HOME/build-tools" | sort -V | tail -1)"
+          mkdir -p /tmp/android-apksigner-tool/lib
+          cp "$ANDROID_HOME/build-tools/$VERSION/apksigner" /tmp/android-apksigner-tool/apksigner
+          cp "$ANDROID_HOME/build-tools/$VERSION/lib/apksigner.jar" /tmp/android-apksigner-tool/lib/apksigner.jar
+          printf '%s\n' "$VERSION" > /tmp/android-apksigner-tool/version.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-apksigner-tool
+          path: /tmp/android-apksigner-tool
